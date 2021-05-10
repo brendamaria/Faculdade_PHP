@@ -21,9 +21,9 @@ include_once("../conexao.php");
                 <nav>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="clientes.html">Clientes</a></li>
-                        <li><a href="contato.html">Automóvel</a></li>
-                        <li><a href="contato.html">Ocorrências</a></li>
+                	    <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="../automovel/automovel.html">Automóvel</a></li>
+                        <li><a href="../ocorrencias/ocorrencias.html">Ocorrências</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,11 +62,13 @@ include_once("../conexao.php");
                     </form>
                 </div>
             </section>
-            <footer>
-		        <img src="../img/logo-branco.png">
-		        <p class="copyright">&copy; Copyright - Brenda Maria - 2021</p>
-	        </footer>
         </main>
+
+        <footer>
+            <img src="../img/logo-branco.png">
+            <p class="copyright">&copy; Copyright - Brenda Maria - 2021</p>
+        </footer>
+
     </body>
 
 </html>

@@ -1,15 +1,27 @@
- <?php
-	session_start();
-	include_once("../conexao.php");
+<?php
+    session_start();
+    include_once("../conexao.php");
 
-	$code = filter_input(INPUT_POST,'code', FILTER_SANITIZE_STRING);
+    $cod = filter_input(INPUT_POST,'cod', FILTER_SANITIZE_STRING);
 
-	$result_usuario = "DELETE FROM e1_cliente WHERE COD = $code";
+    $placa = filter_input(INPUT_POST,'placa', FILTER_SANITIZE_STRING);
 
-	$resultado_usuario = mysqli_query($conn, $result_usuario);
+    $renavam = filter_input(INPUT_POST,'renavan', FILTER_SANITIZE_NUMBER_INT);
 
-	if (mysqli_affected_rows($conn)){
-		echo "<!DOCTYPE html>";
+    $fabricante = filter_input(INPUT_POST, 'fabricante', FILTER_SANITIZE_STRING);
+    
+    $modelo = filter_input(INPUT_POST, 'modelo', FILTER_SANITIZE_STRING);
+
+    $ano = filter_input(INPUT_POST, 'ano', FILTER_SANITIZE_NUMBER_INT);
+
+
+    $result_usuario = "INSERT INTO e2_veiculos(cod,placa,renavan,fabricante,modelo,ano) VALUES('$cod','$placa','$renavam','$fabricante','$modelo','$ano')";
+
+
+    $resultado_usuario = mysqli_query($conn, $result_usuario);
+
+    if (mysqli_affected_rows($conn)){
+	    echo "<!DOCTYPE html>";
 	    echo "<html lang='pt-br'>";
         echo "<head>";
         echo "<meta charset='UTF-8>";
@@ -26,16 +38,16 @@
         echo "<ul>";       
         echo "<li><a href='../index.html'>Home</a></li>";
         echo "<li><a href='clientes.html'>Clientes</a></li>";
-        echo "<li><a href='../automovel/automovel.html'>Automóvel</a></li>";
-        echo "<li><a href='../ocorrencias/ocorrencias.html'>Ocorrências</a></li>";
+        echo "<li><a href='contato.html'>Automóvel</a></li>";
+        echo "<li><a href='contato.html'>Ocorrências</a></li>";
         echo "</ul>";
         echo "</nav>";
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 class='texto-confirmacao-c' type='text'>Usuario excluido com sucesso!</h1>";
+        echo "<h1 class='texto-confirmacao-c' type='text'>Veículo cadastrado com sucesso!</h1>";
         echo "<center>";
-        echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
+        echo "<a href='./automovel.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
         echo "</main>";
         echo "<footer>";
@@ -44,8 +56,9 @@
         echo "</footer>";
 	    echo "</body>";
 	    echo "</html>";
-	} else{
-		echo "<!DOCTYPE html>";
+
+    }else{
+        echo "<!DOCTYPE html>";
 	    echo "<html lang='pt-br'>";
         echo "<head>";
         echo "<meta charset='UTF-8>";
@@ -62,16 +75,16 @@
         echo "<ul>";       
         echo "<li><a href='../index.html'>Home</a></li>";
         echo "<li><a href='clientes.html'>Clientes</a></li>";
-        echo "<li><a href='../automovel/automovel.html'>Automóvel</a></li>";
-        echo "<li><a href='../ocorrencias/ocorrencias.html'>Ocorrências</a></li>";
+        echo "<li><a href='contato.html'>Automóvel</a></li>";
+        echo "<li><a href='contato.html'>Ocorrências</a></li>";
         echo "</ul>";
         echo "</nav>";
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 class='texto-confirmacao-e' type='text'>Usuario não excluido!</h1>";
+        echo "<h1 class='texto-confirmacao-e' type='text'>Veículo não cadastrado!</h1>";
         echo "<center>";
-        echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
+        echo "<a href='./automovel.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
         echo "</main>";
         echo "<footer>";
@@ -80,5 +93,4 @@
         echo "</footer>";
 	    echo "</body>";
 	    echo "</html>";
-	}
-?>
+    }

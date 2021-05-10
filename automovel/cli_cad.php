@@ -13,7 +13,6 @@ session_start();
 	<title>** SEGURADORA FACDF **</title>
 </head>
 
-
 <body>
 
 	<header>
@@ -22,22 +21,24 @@ session_start();
 			<nav>
 				<ul>
 					<li><a href="../index.html">Home</a></li>
-					<li><a href="clientes.html">Clientes</a></li>
-					<li><a href="contato.html">Automóvel</a></li>
-					<li><a href="contato.html">Ocorrências</a></li>
+					<li><a href="../clientes/clientes.html">Clientes</a></li>
+					<li><a href="automovel.html">Automóvel</a></li>
+					<li><a href="../ocorrencias/ocorrencias.html">Ocorrências</a></li>
 				</ul>
 			</nav>
 		</div>
 
 	</header>
+
 	<main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 		<script>
 			jQuery(function($) {
-				$("#placa").mask("999.999.999/99");
-				$("#tel").mask("99.99999.9999");
-				$("#rg").mask("9999999999");
+				$("#placa").mask("ABC-9999");
+				$("#renavan").mask("99999999999");
+				$("#placa").mask("aaa-9999");
+				$("#ano").mask("9999");
 			})
 		</script>
 
@@ -49,35 +50,34 @@ session_start();
 		?>
 
 		<section class="cli_cad">
-			<h3 class="titulo-principal">CADASTRAR</h3>
-			<div class="conteudo-cad">
+			<h3 class="titulo-principal">Cadastrar</h3>
+			<div class="formulario">
 				<form method="post" action="cli_pro.php">
 
 					<label for="cod">CÓDIGO:</label>
-					<input type="text" id="cod" name="cod" placeholder="Digite seu código" class="input-padrao"><br>
+					<input type="text" id="cod" name="cod" placeholder="Digite seu código" class="input-padrao">
 
 					<label for="placa">PLACA:</label>
-					<input type="text" id="placa" name="placa" placeholder="Digite seu nome" class="input-padrao"><br>
+					<input type="text" id="placa" name="placa" placeholder="ABC-9999" class="input-padrao">
 
-					<label for="cpf">RENAVAN:</label>
-					<input type="text" id="cpf" name="cpf" placeholder="999.999.999/99" id="cpf" class="input-padrao"><br>
+					<label for="renavan">RENAVAM:</label>
+					<input type="text" id="renavan" name="renavan" placeholder="99999999999" class="input-padrao">
 
-					<label for="rg">FABRICANTE:</label>
-					<input type="text" id="rg" name="rg" placeholder="9999999999" id="rg" class="input-padrao"><br>
+					<label for="fabricante">FABRICANTE:</label>
+					<input type="text" id="fabricante" name="fabricante" placeholder="Digite o fabricante do veículo" class="input-padrao">
 
-					<label for="tel">ANO:</label>
-					<input type="text" id="tel" name="tel" placeholder="99.99999.9999" id="tel" class="input-padrao"><br>
+					<label for="ano">ANO:</label>
+					<input type="text" id="ano" name="ano" placeholder="9999" class="input-padrao">
 
-					<label for="tel">MODELO:</label>
-					<input type="text" id="tel" name="tel" placeholder="99.99999.9999" id="tel" class="input-padrao"><br>
+					<label for="modelo">MODELO:</label>
+					<input type="text" id="modelo" name="modelo" placeholder="Digite o modelo do veículo" class="input-padrao">
 
 					<a><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px; margin: 0 25px 50px 0;">Cadastrar</button></a>
-					<a href='./clientes.html'> <img src='../img/voltar.png' width='20' height='20'> </a>
+					<a href="./automovel.htm"> <img src="../img/voltar.png" width='20' height='20'> </a>
 				</form>
 			</div>
 		</section>
 	</main>
-
 
 	<footer>
 		<img src="../img/logo-branco.png">

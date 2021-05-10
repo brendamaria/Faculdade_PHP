@@ -33,17 +33,17 @@
         echo "<div class='caixa'>";
         echo "<a href='../index.html'><img src='../img/logo_transparent.png'></a>";    
         echo "<nav>";  
-        echo "<ul>";       
+        echo "<ul>";
         echo "<li><a href='../index.html'>Home</a></li>";
         echo "<li><a href='clientes.html'>Clientes</a></li>";
-        echo "<li><a href='contato.html'>Automóvel</a></li>";
-        echo "<li><a href='contato.html'>Ocorrências</a></li>";
+        echo "<li><a href='../automovel/automovel.html'>Automóvel</a></li>";
+        echo "<li><a href='../ocorrencias/ocorrencias.html'>Ocorrências</a></li>";
         echo "</ul>";
         echo "</nav>";
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 style='font-size:3em; color:green; text-align:center;' type='text'>Usuario cadastrado com sucesso!</h1>";
+        echo "<h1 class='texto-confirmacao-c' type='text'>Usuario cadastrado com sucesso!</h1>";
         echo "<center>";
         echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
@@ -73,14 +73,14 @@
         echo "<ul>";       
         echo "<li><a href='../index.html'>Home</a></li>";
         echo "<li><a href='clientes.html'>Clientes</a></li>";
-        echo "<li><a href='contato.html'>Automóvel</a></li>";
-        echo "<li><a href='contato.html'>Ocorrências</a></li>";
+        echo "<li><a href='../automovel/automovel.html'>Automóvel</a></li>";
+        echo "<li><a href='../ocorrencias/ocorrencias.html'>Ocorrências</a></li>";
         echo "</ul>";
         echo "</nav>";
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 style='font-size:3em; color:red; text-align:center;' type='text'>Usuario não cadastrado!</h1>";
+        echo "<h1 class='texto-confirmacao-e' type='text'>Usuario não cadastrado!</h1>";
         echo "<center>";
         echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
@@ -92,3 +92,4 @@
 	    echo "</body>";
 	    echo "</html>";
     }
+?>

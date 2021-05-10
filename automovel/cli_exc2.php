@@ -1,12 +1,12 @@
- <?php
+<?php
 	session_start();
 	include_once("../conexao.php");
 
-	$code = filter_input(INPUT_POST,'code', FILTER_SANITIZE_STRING);
+	$cod = filter_input(INPUT_POST,'cod', FILTER_SANITIZE_STRING);
 
-	$result_usuario = "DELETE FROM e1_cliente WHERE COD = $code";
+	$result_veiculo = "DELETE FROM e2_veiculos WHERE COD = $cod";
 
-	$resultado_usuario = mysqli_query($conn, $result_usuario);
+	$resultado_veiculo = mysqli_query($conn, $result_veiculo);
 
 	if (mysqli_affected_rows($conn)){
 		echo "<!DOCTYPE html>";
@@ -33,9 +33,9 @@
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 class='texto-confirmacao-c' type='text'>Usuario excluido com sucesso!</h1>";
+        echo "<h1 class='texto-confirmacao-c' type='text'>Automóvel excluido com sucesso!</h1>";
         echo "<center>";
-        echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
+        echo "<a href='./automovel.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
         echo "</main>";
         echo "<footer>";
@@ -69,9 +69,9 @@
         echo "</div>";
         echo "</header>";
         echo "<main>";
-        echo "<h1 class='texto-confirmacao-e' type='text'>Usuario não excluido!</h1>";
+        echo "<h1 class='texto-confirmacao-e' type='text'>Automóvel não excluido!</h1>";
         echo "<center>";
-        echo "<a href='./clientes.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
+        echo "<a href='./automovel.html'> <img class='titulo-confirma' src='../img/voltar.png' width='20' height='20'> </a>";
         echo "</center>";
         echo "</main>";
         echo "<footer>";

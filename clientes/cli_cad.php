@@ -22,9 +22,9 @@ session_start();
 			<nav>
 				<ul>
 					<li><a href="../index.html">Home</a></li>
-					<li><a href="clientes.html">Clientes</a></li>
-					<li><a href="contato.html">Automóvel</a></li>
-					<li><a href="contato.html">Ocorrências</a></li>
+                	<li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="../automovel/automovel.html">Automóvel</a></li>
+                    <li><a href="../ocorrencias/ocorrencias.html">Ocorrências</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -62,13 +62,13 @@ session_start();
 					<input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="input-padrao">
 
 					<label for="cpf">CPF:</label>
-					<input type="text" id="cpf" name="cpf" placeholder="999.999.999/99" id="cpf" class="input-padrao">
+					<input type="text" id="cpf" name="cpf" placeholder="999.999.999/99" class="input-padrao">
 
 					<label for="rg">RG:</label>
-					<input type="text" id="rg" name="rg" placeholder="9999999999" id="rg" class="input-padrao">
+					<input type="text" id="rg" name="rg" placeholder="9999999999" class="input-padrao">
 
 					<label for="tel">TELEFONE:</label>
-					<input type="text" id="tel" name="tel" placeholder="99.99999.9999" id="tel" class="input-padrao">
+					<input type="text" id="tel" name="tel" placeholder="99.99999.9999" class="input-padrao">
 
 					<a><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px; margin: 0 25px 50px 0;">Cadastrar</button></a>
 					<a href='./clientes.html'> <img src='../img/voltar.png' width='20' height='20'> </a>
@@ -76,7 +76,6 @@ session_start();
 			</div>
 		</section>
 	</main>
-
 
 	<footer>
 		<img src="../img/logo-branco.png">

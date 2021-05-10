@@ -11,7 +11,7 @@ include_once("../conexao.php");
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>** CONSULTA CLIENTE POR CÓDIGO **</title>
+    <title>** CONSULTA VEÍCULO POR CÓDIGO **</title>
 </head>
 
 <body>
@@ -31,24 +31,25 @@ include_once("../conexao.php");
 
 
     <main class="main-cons1">
-        <h1 class="titulo-principal">Cliente Selecionado</h1>
+        <h1 class="titulo-principal">Veículo Selecionado</h1>
 
         <section class="form-centro">
             <?php
 
             $cod = filter_input(INPUT_POST, 'cod', FILTER_SANITIZE_STRING);
 
-            $result_cliente = "SELECT cod,nome,cpf,rg,tel FROM e1_cliente WHERE COD = $cod";
-            $resultado_cliente = mysqli_query($conn, $result_cliente);
+            $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veiculos WHERE COD = $cod";
+            $resultado_veiculo = mysqli_query($conn, $result_veiculo);
 
-            if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
-                echo "CÓDIGO......:" . $row_cliente['cod'] . "<br>";
-                echo "NOME........:" . $row_cliente['nome'] . "<br>";
-                echo "CPF..........:" . $row_cliente['cpf'] . "<br>";
-                echo "RG.........:" . $row_cliente['rg'] . "<br>";
-                echo "TELEFONE....:" . $row_cliente['tel'] . "<br>";
+            if ($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)) {
+                echo "CÓDIGO......:" . $row_veiculo['cod'] . "<br>";
+                echo "PLACA.......:" . $row_veiculo['placa'] . "<br>";
+                echo "RENAVAM.....:" . $row_veiculo['renavan'] . "<br>";
+                echo "FABRICANTE..:" . $row_veiculo['fabricante'] . "<br>";
+                echo "MODELO......:" . $row_veiculo['modelo'] . "<br>";
+                echo "ANO.........:" . $row_veiculo['ano'] . "<br>";
             } else {
-                echo "Cliente não existe!!";
+                echo "<h1 class='texto-confirmacao-e'> Veículo não existe!!!!!</h1>";
             }
             ?>
 
