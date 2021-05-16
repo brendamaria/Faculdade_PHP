@@ -51,9 +51,9 @@ include_once("../conexao.php");
                                 echo "<Label for='renavan'>RENAVAM:</Label>
                                     <input class='input-padrao' id='renavan' name='renavan' type='number' placeholder='" . $row_veiculo['renavan'] . "'>";
                                 echo "<Label for='fabricante'>FABRICANTE:</Label>
-                                    <input class='input-padrao' id='fabricante' name='fabricante' type='number' placeholder='" . $row_veiculo['fabricante'] . "'>";
+                                    <input class='input-padrao' id='fabricante' name='fabricante' type='text' placeholder='" . $row_veiculo['fabricante'] . "'>";
                                 echo "<Label for='modelo'>MODELO:</Label>
-                                    <input class='input-padrao' id='modelo' name='modelo' type='number' placeholder='" . $row_veiculo['modelo'] . "'>";
+                                    <input class='input-padrao' id='modelo' name='modelo' type='text' placeholder='" . $row_veiculo['modelo'] . "'>";
                                 echo "<Label for='ano'>ANO:</Label>
                                     <input class='input-padrao' id='ano' name='ano' type='number' placeholder='" . $row_veiculo['ano'] . "'>";
                                 echo "<a><button style='background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px; margin: 0 25px 50px 0;'>Atualizar</button></a>";

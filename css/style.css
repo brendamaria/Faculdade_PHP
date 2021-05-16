@@ -153,6 +153,13 @@ footer {
     margin: 0 60px;
 }
 
+form textarea {
+    display: block;
+    margin: 0 0 9px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
 .titulo-confirma {
     text-align: center;
     font-size: 3em;
